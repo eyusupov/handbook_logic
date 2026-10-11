@@ -1,7 +1,7 @@
 (* ========================================================================= *)
 (* Implementation/proof of the Craig-Robinson interpolation theorem.         *)
 (*                                                                           *)
-(* This is based on the proof in Kreisel & Krivine, which works very nicely  *)
+(* This is based on the proof in Kreisel && Krivine, which works very nicely  *)
 (* in our context.                                                           *)
 (*                                                                           *)
 (* Copyright (c) 2003-2007, John Harrison. (See "LICENSE.txt" for details.)  *)

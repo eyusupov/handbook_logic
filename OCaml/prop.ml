@@ -56,9 +56,9 @@ let rec eval fm v =
   | True -> true
   | Atom(x) -> v(x)
   | Not(p) -> not(eval p v)
-  | And(p,q) -> (eval p v) & (eval q v)
-  | Or(p,q) -> (eval p v) or (eval q v)
-  | Imp(p,q) -> not(eval p v) or (eval q v)
+  | And(p,q) -> (eval p v) && (eval q v)
+  | Or(p,q) -> (eval p v) || (eval q v)
+  | Imp(p,q) -> not(eval p v) || (eval q v)
   | Iff(p,q) -> (eval p v) = (eval q v);;
 
 (* ------------------------------------------------------------------------- *)
@@ -221,7 +221,7 @@ let rec dual fm =
   | Not(p) -> Not(dual p)
   | And(p,q) -> Or(dual p,dual q)
   | Or(p,q) -> And(dual p,dual q)
-  | _ -> failwith "Formula involves connectives ==> or <=>";;
+  | _ -> failwith "Formula involves connectives ==> || <=>";;
 
 (* ------------------------------------------------------------------------- *)
 (* Example.                                                                  *)

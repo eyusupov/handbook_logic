@@ -62,7 +62,7 @@ let normalize_and_orient ord eqs (Atom(R("=",[s;t]))) =
 (* ------------------------------------------------------------------------- *)
 
 let status(eqs,def,crs) eqs0 =
-  if eqs = eqs0 & (length crs) mod 1000 <> 0 then () else
+  if eqs = eqs0 && (length crs) mod 1000 <> 0 then () else
   (print_string(string_of_int(length eqs)^" equations and "^
                 string_of_int(length crs)^" pending critical pairs + "^
                 string_of_int(length def)^" deferred");
@@ -230,7 +230,7 @@ complete_and_simplify ["h"; "g"; "f"] eqs;;
 (************
 
 (* ------------------------------------------------------------------------- *)
-(* Group theory I (K & B example 1).                                         *)
+(* Group theory I (K && B example 1).                                         *)
 (* ------------------------------------------------------------------------- *)
 
 let eqs =
@@ -534,7 +534,7 @@ complete_and_simplify ["*"; "i"] eqs;;
 **************)
 
 (* ------------------------------------------------------------------------- *)
-(* A rather simple example from Baader & Nipkow, p. 141.                     *)
+(* A rather simple example from Baader && Nipkow, p. 141.                     *)
 (* ------------------------------------------------------------------------- *)
 
 let eqs =  [<<f(f(x)) = g(x)>>];;
@@ -576,7 +576,7 @@ let eqs2,def2,crits2 = funpow 123 (complete1 ord) (eqs,def,crits);;
 END_INTERACTIVE;;
 
 (* ------------------------------------------------------------------------- *)
-(* Some of the exercises (these are taken from Baader & Nipkow).             *)
+(* Some of the exercises (these are taken from Baader && Nipkow).             *)
 (* ------------------------------------------------------------------------- *)
 
 START_INTERACTIVE;;
